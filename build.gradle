@@ -27,4 +27,16 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf/*thymeleaf模版*/
+	compile group: 'org.thymeleaf', name: 'thymeleaf', version: '2.0.16'
+	// https://mvnrepository.com/artifact/com.alibaba/druid/*数据源*/
+	compile group: 'com.alibaba', name: 'druid', version: '1.1.6'
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java/*数据库连接*/
+	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+	// https://mvnrepository.com/artifact/com.gitee.reger/spring-boot-starter-dubbo
+	compile group: 'com.gitee.reger', name: 'spring-boot-starter-dubbo', version: '1.0.7'
+
+
+
 }
