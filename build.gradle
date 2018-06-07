@@ -3,7 +3,11 @@ buildscript {
 		springBootVersion = '2.0.1.RELEASE'
 	}
 	repositories {
-		mavenCentral()
+		mavenLocal()
+		maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url "http://repo.spring.io/milestone" }
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -28,15 +32,30 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.12.RELEASE'
+
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.13.RELEASE'
+
 	// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf/*thymeleaf模版*/
 	compile group: 'org.thymeleaf', name: 'thymeleaf', version: '2.0.16'
+
 	// https://mvnrepository.com/artifact/com.alibaba/druid/*数据源*/
 	compile group: 'com.alibaba', name: 'druid', version: '1.1.6'
+
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java/*数据库连接*/
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
-	// https://mvnrepository.com/artifact/com.gitee.reger/spring-boot-starter-dubbo
-	compile group: 'com.gitee.reger', name: 'spring-boot-starter-dubbo', version: '1.0.7'
 
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter /*mybatis的整合*/
+	compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.1'
+
+	// https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter /**分页插件*/
+	compile group: 'com.github.pagehelper', name: 'pagehelper-spring-boot-starter', version: '1.2.3'
+
+
+	// https://mvnrepository.com/artifact/com.gitee.reger/spring-boot-starter-dubbo
+	//compile group: 'com.gitee.reger', name: 'spring-boot-starter-dubbo', version: '1.0.7'
 
 
 }
